@@ -5,7 +5,7 @@ defmodule Rumbl.InfoSys do
     defstruct score: 0, text: nil, url: nil, backend: nil
   end
 
-  def start_link(query, query_ref, owner, limit) do
+  def start_link(backend, query, query_ref, owner, limit) do
     backend.start_link(query, query_ref, owner, limit)
   end
 
